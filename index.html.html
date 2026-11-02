@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="S&S Perfumes — парфуми та жіноча білизна.">
+<title>S&S Perfumes — парфуми та жіноча білизна</title>
+<style>
+:root{--ink:#332b2b;--muted:#827575;--rose:#ead5d2;--rose2:#f7efed;--cream:#fbf8f5;--line:#eadfdb;--accent:#9d7774}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial, sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.top{background:#6f5552;color:#fff;text-align:center;padding:9px 14px;font-size:12px;letter-spacing:.08em}
+header{background:#fffdfb;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{max-width:1160px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-family:Georgia,serif;font-size:25px;letter-spacing:.09em}.brand small{display:block;text-align:center;font:10px Arial;letter-spacing:.23em;color:var(--muted);margin-top:4px}
+nav{display:flex;gap:25px;font-size:13px;color:#554848}nav a:hover{color:var(--accent)}
+.cart{border:1px solid var(--line);background:white;border-radius:30px;padding:10px 15px;cursor:pointer}
+.hero{max-width:1160px;margin:30px auto 20px;padding:0 22px}
+.hero-inner{min-height:330px;background:linear-gradient(110deg,rgba(49,37,36,.58),rgba(49,37,36,.08)),linear-gradient(135deg,#b99b95,#ead8d2 58%,#f3e8e3);border-radius:5px;display:flex;align-items:center;padding:45px 7%;color:white;overflow:hidden}
+.hero-copy{max-width:480px}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase}.hero h1{font:normal clamp(34px,5vw,56px)/1.08 Georgia,serif;margin:17px 0}.hero p{font-size:14px;line-height:1.7;max-width:370px}
+.primary{background:#fff;color:#574441;border:0;padding:13px 22px;display:inline-block;margin-top:13px;cursor:pointer;letter-spacing:.04em}
+.section{max-width:1160px;margin:55px auto;padding:0 22px}.section-head{text-align:center;margin-bottom:26px}.section-head h2{font:normal 32px Georgia,serif;margin:0 0 8px}.section-head p{font-size:13px;color:var(--muted);margin:0}
+.categories{display:grid;grid-template-columns:1fr 1fr;gap:18px}.cat{min-height:155px;background:var(--rose2);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;border:1px solid var(--line)}.cat:nth-child(2){background:#f0e8e2}.cat h3{font:normal 27px Georgia,serif;margin:0 0 8px}.cat span{font-size:12px;color:var(--muted)}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:white;padding:9px 14px;border-radius:25px;font-size:12px;cursor:pointer}.filter.active{background:#745b58;color:white;border-color:#745b58}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:white;border:1px solid var(--line);padding:12px}.photo{height:190px;background:linear-gradient(145deg,#f3e8e4,#e4d0ca);display:flex;align-items:center;justify-content:center;color:#947a76;font:italic 17px Georgia;text-align:center;padding:15px}.product h3{font:normal 17px Georgia;margin:13px 0 6px}.product p{font-size:12px;color:var(--muted);margin:0 0 10px}.price-row{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:bold;font-size:14px}.add{background:#745b58;color:white;border:0;padding:9px 12px;cursor:pointer;font-size:12px}
+.info{background:#f3e9e5;padding:35px 22px;text-align:center}.info h2{font:normal 28px Georgia;margin:0 0 12px}.info p{max-width:650px;margin:auto;color:#685b59;font-size:13px;line-height:1.7}
+footer{background:#453735;color:#f8efeb;padding:35px 22px;text-align:center}footer .brand{font-size:22px}footer p{font-size:12px;color:#d7c6c1;line-height:1.8}
+.overlay{display:none;position:fixed;inset:0;background:#0008;z-index:10;justify-content:flex-end}.overlay.open{display:flex}.drawer{background:#fffdfb;width:min(420px,100%);height:100%;padding:24px;overflow:auto}.drawer-head{display:flex;justify-content:space-between;align-items:center}.drawer h2{font:normal 27px Georgia}.close{border:0;background:none;font-size:25px;cursor:pointer}.cart-item{border-bottom:1px solid var(--line);padding:14px 0;display:flex;justify-content:space-between;gap:12px;font-size:13px}.total{display:flex;justify-content:space-between;font-weight:bold;margin:20px 0}.checkout{display:grid;gap:10px}.checkout input,.checkout textarea{border:1px solid var(--line);padding:12px;background:white;width:100%}.checkout button{background:#745b58;color:white;border:0;padding:14px;cursor:pointer}.note{font-size:11px;color:var(--muted);line-height:1.5}.empty{color:var(--muted);font-size:13px;padding:22px 0}
+@media(max-width:760px){.nav{padding:14px 16px;flex-wrap:wrap}.brand{font-size:21px}nav{order:3;width:100%;justify-content:center;gap:17px;font-size:12px}.hero{margin-top:16px;padding:0 14px}.hero-inner{min-height:290px;padding:30px 25px}.section{margin:40px auto;padding:0 14px}.products{grid-template-columns:repeat(2,1fr);gap:10px}.photo{height:155px}.categories{gap:10px}.cat{min-height:130px;padding:14px}.cat h3{font-size:22px}}
+@media(max-width:380px){nav{gap:11px}.products{grid-template-columns:1fr 1fr}.photo{height:130px}}
+</style>
+</head>
+<body>
+<div class="top">ПАРФУМИ ТА ЖІНОЧА БІЛИЗНА · ВІДПРАВКА ПО УКРАЇНІ</div>
+<header><div class="nav">
+<a class="brand" href="#">S&amp;S PERFUMES<small>BEAUTY · STYLE · YOU</small></a>
+<nav><a href="#home">Головна</a><a href="#catalog">Каталог</a><a href="#about">Про нас</a><a href="#delivery">Оплата і доставка</a></nav>
+<button class="cart" onclick="openCart()">Кошик (<span id="count">0</span>)</button>
+</div></header>
+<main id="home">
+<section class="hero"><div class="hero-inner"><div class="hero-copy">
+<div class="eyebrow">Твоя маленька розкіш щодня</div>
+<h1>Знайди свій особливий настрій</h1>
+<p>Аромати та жіночність у деталях. Обирай те, що підкреслює саме тебе.</p>
+<a class="primary" href="#catalog">Переглянути каталог</a>
+</div></div></section>
+<section class="section"><div class="section-head"><h2>Обирай своє</h2><p>Два розділи — безліч способів потішити себе</p></div>
+<div class="categories"><a class="cat" href="#catalog" onclick="setFilter('perfume')"><div><h3>Парфуми</h3><span>Аромати на кожен день</span></div></a><a class="cat" href="#catalog" onclick="setFilter('lingerie')"><div><h3>Жіноча білизна</h3><span>Краса в кожній деталі</span></div></a></div></section>
+<section class="section" id="catalog"><div class="section-head"><h2>Каталог товарів</h2><p>Незабаром тут з’являться твої улюблені товари</p></div>
+<div class="toolbar"><div class="filters"><button class="filter active" onclick="setFilter('all')">Усі товари</button><button class="filter" onclick="setFilter('perfume')">Парфуми</button><button class="filter" onclick="setFilter('lingerie')">Жіноча білизна</button></div></div>
+<div class="products" id="products">
+<div class="product" data-kind="perfume"><div class="photo">Фото парфумів</div><h3>Назва парфумів</h3><p>Додай опис аромату та об’єм</p><div class="price-row"><span class="price">Ціна</span><button class="add" onclick="alert('Це демонстраційний товар. Додай свої товари перед запуском магазину.')">Детальніше</button></div></div>
+<div class="product" data-kind="lingerie"><div class="photo">Фото білизни</div><h3>Назва комплекту</h3><p>Додай розмір та опис</p><div class="price-row"><span class="price">Ціна</span><button class="add" onclick="alert('Це демонстраційний товар. Додай свої товари перед запуском магазину.')">Детальніше</button></div></div>
+</div></section>
+<section class="info" id="about"><h2>Про S&amp;S Perfumes</h2><p>Магазин парфумів та жіночої білизни, де можна знайти приємні покупки за доступними цінами. Додай тут свою історію, переваги магазину та контактну інформацію.</p></section>
+<section class="section" id="delivery"><div class="section-head"><h2>Оплата та доставка</h2><p>Умови можна буде змінити відповідно до твоїх правил</p></div><div class="categories"><div class="cat"><div><h3>Оплата</h3><span>Оплата при отриманні — уточни доступні способи</span></div></div><div class="cat"><div><h3>Доставка</h3><span>Відправка по Україні — додай строки та умови</span></div></div></div></section>
+</main>
+<footer><div class="brand">S&amp;S PERFUMES</div><p>Парфуми · Жіноча білизна<br>Instagram: @aura_perfumes.ua<br>© S&amp;S Perfumes</p></footer>
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeCart()"><aside class="drawer"><div class="drawer-head"><h2>Твій кошик</h2><button class="close" onclick="closeCart()">×</button></div><div id="cartItems" class="empty">Кошик поки порожній.</div><div class="total"><span>Разом</span><span id="total">0 грн</span></div><form class="checkout" onsubmit="submitOrder(event)"><input required placeholder="Твоє ім’я"><input required type="tel" placeholder="Номер телефону"><input placeholder="Місто та відділення Нової пошти"><textarea rows="2" placeholder="Коментар до замовлення"></textarea><button type="submit">Надіслати замовлення</button></form><p class="note">Демонстраційна форма: для реального приймання замовлень потрібно підключити сервер або сервіс обробки заявок.</p></aside></div>
+<script>
+let cart=[];
+function setFilter(kind){document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.textContent.trim()===(kind==='all'?'Усі товари':kind==='perfume'?'Парфуми':'Жіноча білизна')));document.querySelectorAll('.product').forEach(p=>p.style.display=(kind==='all'||p.dataset.kind===kind)?'':'none')}
+function openCart(){document.getElementById('overlay').classList.add('open')}
+function closeCart(){document.getElementById('overlay').classList.remove('open')}
+function renderCart(){document.getElementById('count').textContent=cart.reduce((a,b)=>a+b.qty,0);document.getElementById('total').textContent=cart.reduce((a,b)=>a+b.price*b.qty,0)+' грн';document.getElementById('cartItems').innerHTML=cart.length?cart.map((x,i)=>`<div class="cart-item"><span>${x.name} × ${x.qty}</span><span>${x.price*x.qty} грн <button onclick="removeItem(${i})">×</button></span></div>`).join(''):'<div class="empty">Кошик поки порожній.</div>'}
+function removeItem(i){cart.splice(i,1);renderCart()}
+function submitOrder(e){e.preventDefault();alert('Це демонстраційний сайт. Щоб замовлення надходили власнику магазину, потрібно підключити обробку форми.');}
+</script>
+</body></html>
